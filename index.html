@@ -92,17 +92,18 @@
     		<article class="row noticia">
 
     			<div class="noticia-img col-12 col-sm-5 col-lg-4">
-    				<img src="img/sorteo-libertadores.jpg" class="img-fluid">
+    				<img src="https://via.placeholder.com/1000x600/" class="img-fluid">
     			</div>
 
     			<div class="noticia-txt col-12 col-sm-7 col-lg-8">
-					<h3 class="h5 font-weight-bold">La tecnología llega a la actual edición de la Libertadores</h3>
-					<p class="small">por Joaquín Angeli</p>
-					<p>La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores</p>
+					<h3 class="h5 font-weight-bold">{{TITULO}}</h3>
+					<p class="small">por <a href="#">{{AUTOR}}</a></p>
+					<p>{{DETALLE}}</p>
     			</div>
     		</article>
     		
     	</section>
+
     </main>
 
     <!-- Optional JavaScript -->
@@ -110,6 +111,16 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/noticias"></script>
+    <script>
+        var noticia = document.querySelector(".noticia");
+
+        noticia.querySelector("h3").innerText = titulo;
+        noticia.querySelector(".small a").innerText = autor;
+        noticia.querySelector("p:last-child").innerText = detalle;
+        noticia.querySelector("img").src = "img/" + imagen; 
+
+    </script>
 </body>
 
 </html>
